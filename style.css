@@ -118,6 +118,11 @@ nav{
     width: 100%;
     padding-bottom: 60px;
 }
+.favPlayers-content{
+    width: 100%;
+    padding-bottom: 70px;
+}
+
 
 
 @media (max-width: 768px){
@@ -167,10 +172,7 @@ nav{
         width: 100%;
         height: fit-content;
     }
-    .favSport-content h1{
-        font-size: 5rem;
-    }
-    .favTeams-content h1{
+    h1{
         font-size: 5rem;
     }
 
@@ -179,6 +181,9 @@ nav{
 @media (min-width: 500px){
     .imgs-text .teams-content{
         grid-template-columns: repeat(2,30%);
+    }
+    .imgs-text .players-content{
+        grid-template-columns: repeat(3,30%);
     }
 }
 
@@ -224,7 +229,7 @@ nav{
     color: #767676;
 }
 
-.teams-content{
+.teams-content, .players-content{
     width: 100%;
     margin: auto;
 }
@@ -232,7 +237,7 @@ nav{
     display: block;
     text-align: center;
 }
-.teams-content img{
+.teams-content img, .players-content img{
     width: 100%;
 }
 .team-row{
@@ -242,13 +247,31 @@ nav{
     border-radius: 10px;
     background: #279EFF;
 }
+.player-row{
+    min-height:200px;
+    width: 80%;
+    overflow: hidden;
+    margin: 25px auto;
+    border-radius: 10px;
+    background: #279EFF;
+}
 .team-row p{
     width: 90%;
     font-size: 1em;
     margin: 10px auto -10px auto;
 }
-.imgs-text .teams-content{
+.imgs-text .teams-content, .imgs-text .players-content{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+.player-row a{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #000;
+}
+.player-row a:hover{
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #f3f3f3;
 }
