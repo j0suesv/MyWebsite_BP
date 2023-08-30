@@ -1,0 +1,133 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-family: sans-serif;
+}
+.logo {
+    width: 110px;
+    height: 55px;
+    user-select: none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: #279EFF;
+    padding: 10px 0;
+
+}
+
+.ham-icon{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham-icon span{
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 29px;
+    margin: 8px auto;
+    border-radius: 2px;
+    
+}
+
+.menu-links{
+    display: flex;
+    padding: 0;
+}
+.menu-links li{
+    padding: 0 40px;
+    list-style-type: none;
+}
+.menu-links li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color:#f3f3f3;
+    font-weight: 600;
+}
+
+.menu-links li a:hover{
+    color: black;
+    transition: .3s;
+}
+
+@media (max-width: 768px){
+    body{
+        overflow: hidden;
+
+    }
+    .logo {
+        padding-left: 25px;
+        height: 40px;
+        width: 80px;
+    }
+    .ham-icon{
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 25px;
+        transition: 0.2s 0.1s;
+    }
+    .ham-icon:hover{
+        transform: rotate(360deg);
+        
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+    }
+    .menu-links{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 92vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        opacity: 0;
+    }
+
+    .menu-links li{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+}
+
+@keyframes showMenu {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.menu-links.active{
+    display: flex;
+    animation: showMenu 0.3s ease-in-out both;
+}
+.br-1.animated{
+    transform: rotate(-45deg) translate(-10px, 6px);
+}
+.br-2.animated{
+    opacity: 0;
+}
+.br-3.animated{
+    transform: rotate(45deg) translate(-10px, -6px);
+}
