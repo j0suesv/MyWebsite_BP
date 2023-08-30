@@ -28,6 +28,15 @@ p{
     color: #000;
     font-family: 'Arvo', serif;
 }
+hr{
+    border: 5px dotted #279EFF;
+    border-style: none none dotted;
+    width: 5%;
+    margin: 50px auto;
+}
+.first-hr{
+    margin: 80px auto 48px auto;
+}
 .logo {
     width: 110px;
     height: 55px;
@@ -83,7 +92,7 @@ nav{
     transition: .3s;
 }
 
-.aboutMe-content{
+.aboutMe-content,.favSport-content{
     padding: 0 80px;
     display: flex;
     justify-content: center;
@@ -93,7 +102,7 @@ nav{
     /* background: #aad3b7; */
 
 }
-.developerImg{
+.developerImg, .futbolImg{
     height: 30vw;
     min-height: 250px;
     max-width: 800px;
@@ -102,14 +111,15 @@ nav{
     width: 100%;
     text-align: center;
 }
-
+.favSport-content{
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 50px;
+    /* background: #aad3b7; */
+}
 
 
 @media (max-width: 768px){
-    body{
-        overflow: hidden;
-
-    }
     .logo {
         padding-left: 25px;
         height: 40px;
@@ -149,10 +159,18 @@ nav{
         padding: 20px;
     }
     
-    .aboutMe-content{
+    .aboutMe-content,.favSport-content{
         display: block;
         text-align: center;
         padding-top: 20px;
+        width: 100%;
+        height: 100vh;
+    }
+    .favSport-content{
+        height: 98vh;
+    }
+    .favSport-content h1{
+        font-size: 5rem;
     }
 }
 
@@ -174,3 +192,26 @@ nav{
     transform: rotate(45deg) translate(-10px, -6px);
 }
 
+.bottom-container {
+    padding: 30px 0;
+    background-color: #0C356A;
+    text-align: center;
+    margin-bottom: 0;
+}
+.footer-link {
+    margin: auto 30px auto 30px;
+    text-decoration: none;
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+
+.bottom-container p{
+    margin: 30px 0 0 0;
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+.bottom-container a:hover{
+    color: #767676;
+}
